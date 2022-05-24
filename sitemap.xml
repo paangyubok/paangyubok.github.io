@@ -1,74 +1,53 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="https://pdoubleang.xyz/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-    <url>
-      <loc>https://paangyubok.github.io/categories/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/categories/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/2022/first/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/post/first/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/posts/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/post/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/tags/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/tags/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/tags/test/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/tags/test/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-    <url>
-      <loc>https://paangyubok.github.io/categories/%E6%9D%82%E9%A1%B9/</loc>
-      
-      <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
+  <url>
+    <loc>https://pdoubleang.xyz/categories/%E6%9D%82%E9%A1%B9/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
 </urlset>

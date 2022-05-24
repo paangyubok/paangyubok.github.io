@@ -1,2 +1,0 @@
-# paangyubok.github.io
-blog

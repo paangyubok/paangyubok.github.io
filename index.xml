@@ -1,20 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pdoubleang&#39;s blog on pdoubleang&#39;s blog</title>
-    <link>https://paangyubok.github.io/</link>
-    <description>Recent content in pdoubleang&#39;s blog on pdoubleang&#39;s blog</description>
+    <title>PdoubleANG&#39;s Blog</title>
+    <link>https://pdoubleang.xyz/</link>
+    <description>Recent content on PdoubleANG&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://pdoubleang.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>https://paangyubok.github.io/posts/</link>
+      <title>my first</title>
+      <link>https://pdoubleang.xyz/post/first/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://paangyubok.github.io/posts/</guid>
-      <description></description>
+      <guid>https://pdoubleang.xyz/post/first/</guid>
+      <description>Hello World $E=mc^2$ Test End</description>
     </item>
     
   </channel>

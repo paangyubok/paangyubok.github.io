@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Test on PdoubleANG&#39;s Blog</title>
-    <link>https://pdoubleang.xyz/tags/test/</link>
-    <description>Recent content in Test on PdoubleANG&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://pdoubleang.xyz/tags/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>my first</title>
-      <link>https://pdoubleang.xyz/post/first/</link>
-      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://pdoubleang.xyz/post/first/</guid>
-      <description>Hello World $E=mc^2$ Test End</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Test - Tag - </title>
+        <link>/tags/test/</link>
+        <description>Test - Tag - </description>
+        <generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 23 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/test/" rel="self" type="application/rss+xml" /><item>
+    <title>my first</title>
+    <link>/posts/first/</link>
+    <pubDate>Mon, 23 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>pdoubleang</author>
+    <guid>/posts/first/</guid>
+    <description><![CDATA[Hello World subtitle $E=mc^2$
+Test End]]></description>
+</item>
+</channel>
 </rss>

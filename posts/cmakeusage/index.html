@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>CMake Usage - </title><meta name="Description" content="emm"><meta property="og:title" content="CMake Usage" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/cmakeusage/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-29T16:34:52+08:00" />
+<meta property="article:modified_time" content="2022-05-29T16:34:52+08:00" /><meta property="og:site_name" content="PdoubleANG&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CMake Usage"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="pdoubleang&#39;s site">
+<meta name="apple-mobile-web-app-title" content="pdoubleang&#39;s site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/posts/cmakeusage/" /><link rel="prev" href="/posts/singleclouduserdefinedskyline/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CMake Usage",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/posts\/cmakeusage\/"
+        },"genre": "posts","keywords": "CMake, C\u002b\u002b","wordcount":  493 ,
+        "url": "\/posts\/cmakeusage\/","datePublished": "2022-05-29T16:34:52+08:00","dateModified": "2022-05-29T16:34:52+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "pdoubleang"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">Nothing Here</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">Nothing Here</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CMake Usage</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>pdoubleang</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/c++/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>C++</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-29">2022-05-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;493 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#set-variable">set variable</a></li>
+    <li><a href="#get-variable">get variable</a></li>
+    <li><a href="#built-in-variable">Built-in variable</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#include-a-directory">Include a directory</a></li>
+    <li><a href="#include-third-party-library">Include third party library</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#link-a-library">Link a library</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#compile-a-executable">Compile a executable</a>
+      <ul>
+        <li><a href="#related-function">Related function</a></li>
+      </ul>
+    </li>
+    <li><a href="#compile-a-library">Compile a library</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#string">string</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="variable">Variable</h1>
+<h2 id="set-variable">set variable</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set (<span style="color:#e6db74">variable</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="get-variable">get variable</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">${variable}
+</span></span></span></code></pre></div><h2 id="built-in-variable">Built-in variable</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMKAE_C_COMPLIER</td>
+<td>C compiler</td>
+</tr>
+<tr>
+<td>CMKAE_CXX_COMPLIER</td>
+<td>C++ compiler</td>
+</tr>
+<tr>
+<td>CMAKE_LINKER</td>
+<td>the program used to link library</td>
+</tr>
+<tr>
+<td>CMAKE_C_FLAGS</td>
+<td>C flags</td>
+</tr>
+<tr>
+<td>CMAKE_CXX_FLAGS</td>
+<td>C++ flags</td>
+</tr>
+<tr>
+<td>CMAKE_INCLUDE_PATH</td>
+<td>header search path. Default is null.</td>
+</tr>
+<tr>
+<td>CMAKE_LIBRARY_PATH</td>
+<td>library search path. Default is null.</td>
+</tr>
+<tr>
+<td>CMAKE_LIBRARY_PATH</td>
+<td>install path. Default is <code>/usr/local</code></td>
+</tr>
+<tr>
+<td>PROJECT_BINARY_DIR</td>
+<td>the path that running <code>cmake</code> command. As same as <code>CMAKE_BINARY_DIR</code>, <code>projectname_BINARY_DIR</code>.</td>
+</tr>
+<tr>
+<td>PROJECT_SOURCE_DIR</td>
+<td>the root path of the project. As same as <code>CMAKE_SOURCE_DIR</code>, <code>projectname_SOURCE_DIR</code>.</td>
+</tr>
+<tr>
+<td>CMAKE_CURRENT_SOURCE_DIR</td>
+<td>the path of current <code>CMakeLists.txt</code> locating</td>
+</tr>
+<tr>
+<td>CMAKE_PREFIX_PATH</td>
+<td>semicolon-separated list of directories specifying  installation prefixes to searched by the <code>find_package()</code>,<code>find_program()</code>,<code>find_library()</code>, <code>find_file()</code> and <code>find_file()</code>.</td>
+</tr>
+<tr>
+<td>CMAKE_BUILD_TYPE</td>
+<td>control the build type.</td>
+</tr>
+<tr>
+<td>EXECUTABLE_OUTPUT_PATH</td>
+<td>executable location. Default is null.</td>
+</tr>
+<tr>
+<td>LIBRARY_OUTPUT_PATH</td>
+<td>library location. Default is null.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="include">Include</h1>
+<h2 id="include-a-directory">Include a directory</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>target_include_directories( <span style="color:#e6db74">target</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">PRIVATE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">path/to/include</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>equivalent to <code>-Ipath/to/include</code> in gcc</p>
+<p>options:</p>
+<ul>
+<li>
+<p>PRIVATE: the directory is added to this target&rsquo;s include directories.</p>
+</li>
+<li>
+<p>INTERFACE: the directory is added to the include directories for any targets that link this library.</p>
+</li>
+<li>
+<p>PUBLIC: As INTERFACE, it is included in this library and also any targets that link this library.</p>
+</li>
+</ul>
+<h2 id="include-third-party-library">Include third party library</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>find_package(<span style="color:#e6db74">lib_name</span> <span style="color:#e6db74">version</span> <span style="color:#e6db74">[REQUIRED]</span> <span style="color:#e6db74">[COMPONENTS]</span> <span style="color:#e6db74">name1</span> <span style="color:#e6db74">name2</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>find the library has installed in system.</p>
+<p>options:</p>
+<ul>
+<li>
+<p>REQUIRED: tells the module that this is required and to fail if it can&rsquo;t be found.</p>
+</li>
+<li>
+<p>COMPONENTS: the list of components to find in the library. Can use the component as <code>lib_name::name</code> in the script.</p>
+</li>
+</ul>
+<p>Most included packages will set a variable <code>lib_name_FOUND</code>.</p>
+<p>Can directly use this library without using command to include the library, but still need to link this library to the target.</p>
+<p>The difference with <code>find_library</code>:</p>
+<blockquote>
+<p>Imagine you want to use <code>zlib</code> in your project, you need to find the header file <code>zlib.h</code>, and the library <code>libz.so</code> (on Linux). You can use the low-level <code>cmake</code> commands <code>find_path</code> and <code>find_library</code> to find them, or you can use <code>find_package(ZLIB)</code>. The later command will try to find out all what is necessary to use <code>zlib</code>. It can be extra macro definitions, or dependencies.</p>
+</blockquote>
+<h1 id="link">Link</h1>
+<h2 id="link-a-library">Link a library</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>target_link_libraries( <span style="color:#e6db74">binary</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">PRIVATE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">library</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>options: same as include a directory.</p>
+<h1 id="compile">Compile</h1>
+<h2 id="compile-a-executable">Compile a executable</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_executable(<span style="color:#e6db74">targets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/main.cc</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="related-function">Related function</h3>
+<ul>
+<li><code>aux_source_directory(dir, variable)</code>: find all source files in <code>dir</code> and store them in <code>variable</code>.</li>
+</ul>
+<h2 id="compile-a-library">Compile a library</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_library( <span style="color:#e6db74">library</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">STATIC</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/hello.cc</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>options:</p>
+<ul>
+<li>
+<p>STATIC</p>
+</li>
+<li>
+<p>SHARED</p>
+</li>
+</ul>
+<h1 id="install">Install</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#75715e"># normal install
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>install( <span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">target_name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">folder_name</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># install library
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>install( <span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">target_name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">STATIC</span> <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">folder_name</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>install(move) some files to destination.</p>
+<p>options:</p>
+<p>    File type</p>
+<ul>
+<li>
+<p>TARGETS: install executable files(.out, .so, .a). <code>STATIC/SHARED</code> need to be added before <code>DESTINATION</code> while targets are libraries.</p>
+</li>
+<li>
+<p>DIRECTORY: copy directory to <code>DESTINATION</code> and rename to <code>folder_name</code>.</p>
+</li>
+<li>
+<p>FILES: copy files to <code>DESTINATION/folder_name</code>.</p>
+</li>
+</ul>
+<p>    Default destination</p>
+<ul>
+<li>DESTINATION: default location in system. It can be edited via specify <code>CMAKE_INSTALL_PREFIX</code></li>
+</ul>
+<h1 id="message">Message</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>message(<span style="color:#e6db74">[option]</span> <span style="color:#e6db74">&#34;message text&#34;</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>log a message.</p>
+<p>options:</p>
+<ul>
+<li>
+<p>STATUS: be concise which means no more than a single line, but still informative.</p>
+</li>
+<li>
+<p>FATAL_ERROR: stop processing and generation.</p>
+</li>
+<li>
+<p>WARNING: warning but continue processing.</p>
+</li>
+</ul>
+<h2 id="string">string</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>string(<span style="color:#e6db74">REPLACE</span> <span style="color:#e6db74">&lt;match_string&gt;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&lt;replace_string&gt;</span> <span style="color:#e6db74">&lt;output_variable&gt;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&lt;input&gt;</span> <span style="color:#e6db74">[&lt;input&gt;...]</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Replace all occurrences of <code>&lt;match_string&gt;</code> in the <code>&lt;input&gt;</code> with <code>&lt;replace_string&gt;</code> and store the result in the <code>&lt;output_variable&gt;</code>.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-29</span>
+            </div><div class="post-info-license">
+                <span><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="/posts/cmakeusage/" data-title="CMake Usage" data-hashtags="CMake,C&#43;&#43;"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="/posts/cmakeusage/" data-hashtag="CMake"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="/posts/cmakeusage/" data-title="CMake Usage"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="/posts/cmakeusage/" data-title="CMake Usage"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="/posts/cmakeusage/" data-title="CMake Usage"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cmake/">CMake</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/singleclouduserdefinedskyline/" class="prev" rel="prev" title="Single Cloud User-Defined Skyline"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Single Cloud User-Defined Skyline</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

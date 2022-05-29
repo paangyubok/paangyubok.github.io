@@ -2,25 +2,24 @@
     <channel>
         <title></title>
         <link>/</link>
-        <description>nothing</description>
-        <generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 26 May 2022 22:49:45 &#43;0800</lastBuildDate>
+        <description>emm</description>
+        <generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 29 May 2022 16:34:52 &#43;0800</lastBuildDate>
             <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>CMake Usage</title>
+    <link>/posts/cmakeusage/</link>
+    <pubDate>Sun, 29 May 2022 16:34:52 &#43;0800</pubDate>
+    <author>pdoubleang</author>
+    <guid>/posts/cmakeusage/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Single Cloud User-Defined Skyline</title>
     <link>/posts/singleclouduserdefinedskyline/</link>
     <pubDate>Thu, 26 May 2022 22:49:45 &#43;0800</pubDate>
     <author>pdoubleang</author>
     <guid>/posts/singleclouduserdefinedskyline/</guid>
     <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>my first</title>
-    <link>/posts/first/</link>
-    <pubDate>Mon, 23 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>pdoubleang</author>
-    <guid>/posts/first/</guid>
-    <description><![CDATA[Hello World subtitle $E=mc^2$
-Test End]]></description>
 </item>
 </channel>
 </rss>

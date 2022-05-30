@@ -35,5 +35,13 @@
     <guid>/tags/skyline-search/</guid>
     <description><![CDATA[]]></description>
 </item>
+<item>
+    <title>Test</title>
+    <link>/tags/test/</link>
+    <pubDate>Mon, 23 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>/tags/test/</guid>
+    <description><![CDATA[]]></description>
+</item>
 </channel>
 </rss>

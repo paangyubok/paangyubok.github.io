@@ -10,7 +10,8 @@
     <author>pdoubleang</author>
     <guid>/posts/first/</guid>
     <description><![CDATA[Hello World subtitle $E=mc^2$
-Test End]]></description>
+Test End
+#include&lt;iostream&gt;using namespace std; int main() { cout &lt;&lt; &#34;Hello World!&#34; &lt;&lt; endl; return 0; } ]]></description>
 </item>
 </channel>
 </rss>

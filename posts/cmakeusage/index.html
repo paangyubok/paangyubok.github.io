@@ -108,9 +108,9 @@
 </nav></div>
             </div><div class="content" id="content"><h1 id="variable">Variable</h1>
 <h2 id="set-variable">set variable</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set (<span style="color:#e6db74">variable</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">set</span> <span class="p">(</span><span class="s">variable</span> <span class="s">...</span><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><h2 id="get-variable">get variable</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">${variable}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="err">${variable}
 </span></span></span></code></pre></div><h2 id="built-in-variable">Built-in variable</h2>
 <table>
 <thead>
@@ -184,10 +184,10 @@
 </table>
 <h1 id="include">Include</h1>
 <h2 id="include-a-directory">Include a directory</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>target_include_directories( <span style="color:#e6db74">target</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">PRIVATE</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">path/to/include</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">target_include_directories</span><span class="p">(</span> <span class="s">target</span>
+</span></span><span class="line"><span class="cl">    <span class="s">PRIVATE</span>
+</span></span><span class="line"><span class="cl">    <span class="s">path/to/include</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>equivalent to <code>-Ipath/to/include</code> in gcc</p>
 <p>options:</p>
 <ul>
@@ -202,7 +202,7 @@
 </li>
 </ul>
 <h2 id="include-third-party-library">Include third party library</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>find_package(<span style="color:#e6db74">lib_name</span> <span style="color:#e6db74">version</span> <span style="color:#e6db74">[REQUIRED]</span> <span style="color:#e6db74">[COMPONENTS]</span> <span style="color:#e6db74">name1</span> <span style="color:#e6db74">name2</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">find_package</span><span class="p">(</span><span class="s">lib_name</span> <span class="s">version</span> <span class="s">[REQUIRED]</span> <span class="s">[COMPONENTS]</span> <span class="s">name1</span> <span class="s">name2</span> <span class="s">...</span><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>find the library has installed in system.</p>
 <p>options:</p>
 <ul>
@@ -221,25 +221,25 @@
 </blockquote>
 <h1 id="link">Link</h1>
 <h2 id="link-a-library">Link a library</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>target_link_libraries( <span style="color:#e6db74">binary</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">PRIVATE</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">library</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">target_link_libraries</span><span class="p">(</span> <span class="s">binary</span>
+</span></span><span class="line"><span class="cl">    <span class="s">PRIVATE</span>
+</span></span><span class="line"><span class="cl">    <span class="s">library</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>options: same as include a directory.</p>
 <h1 id="compile">Compile</h1>
 <h2 id="compile-a-executable">Compile a executable</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_executable(<span style="color:#e6db74">targets</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/main.cc</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">add_executable</span><span class="p">(</span><span class="s">targets</span>
+</span></span><span class="line"><span class="cl">    <span class="s">src/main.cc</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><h3 id="related-function">Related function</h3>
 <ul>
 <li><code>aux_source_directory(dir, variable)</code>: find all source files in <code>dir</code> and store them in <code>variable</code>.</li>
 </ul>
 <h2 id="compile-a-library">Compile a library</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_library( <span style="color:#e6db74">library</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">STATIC</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/hello.cc</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">add_library</span><span class="p">(</span> <span class="s">library</span> 
+</span></span><span class="line"><span class="cl">    <span class="s">STATIC</span>
+</span></span><span class="line"><span class="cl">    <span class="s">src/hello.cc</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>options:</p>
 <ul>
 <li>
@@ -250,13 +250,13 @@
 </li>
 </ul>
 <h1 id="install">Install</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#75715e"># normal install
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>install( <span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">target_name</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">folder_name</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># install library
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>install( <span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">target_name</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">STATIC</span> <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">folder_name</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="c"># normal install
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">install</span><span class="p">(</span> <span class="s">TARGETS</span> <span class="s">target_name</span>
+</span></span><span class="line"><span class="cl">    <span class="s">DESTINATION</span> <span class="s">folder_name</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># install library
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">install</span><span class="p">(</span> <span class="s">TARGETS</span> <span class="s">target_name</span>
+</span></span><span class="line"><span class="cl">    <span class="s">STATIC</span> <span class="s">DESTINATION</span> <span class="s">folder_name</span><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>install(move) some files to destination.</p>
 <p>options:</p>
 <p>    File type</p>
@@ -276,7 +276,7 @@
 <li>DESTINATION: default location in system. It can be edited via specify <code>CMAKE_INSTALL_PREFIX</code></li>
 </ul>
 <h1 id="message">Message</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>message(<span style="color:#e6db74">[option]</span> <span style="color:#e6db74">&#34;message text&#34;</span> <span style="color:#e6db74">...</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">message</span><span class="p">(</span><span class="s">[option]</span> <span class="s2">&#34;message text&#34;</span> <span class="s">...</span><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>log a message.</p>
 <p>options:</p>
 <ul>
@@ -291,9 +291,9 @@
 </li>
 </ul>
 <h2 id="string">string</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>string(<span style="color:#e6db74">REPLACE</span> <span style="color:#e6db74">&lt;match_string&gt;</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&lt;replace_string&gt;</span> <span style="color:#e6db74">&lt;output_variable&gt;</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">&lt;input&gt;</span> <span style="color:#e6db74">[&lt;input&gt;...]</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">string</span><span class="p">(</span><span class="s">REPLACE</span> <span class="s">&lt;match_string&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="s">&lt;replace_string&gt;</span> <span class="s">&lt;output_variable&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="s">&lt;input&gt;</span> <span class="s">[&lt;input&gt;...]</span><span class="p">)</span><span class="err">
 </span></span></span></code></pre></div><p>Replace all occurrences of <code>&lt;match_string&gt;</code> in the <code>&lt;input&gt;</code> with <code>&lt;replace_string&gt;</code> and store the result in the <code>&lt;output_variable&gt;</code>.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
